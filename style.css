@@ -1,13 +1,41 @@
 body {
-	font-family: sans-serif;
-	text-align: center;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 h1 {
-	display: block;
+  display: block;
+  font-size: 10vw;
 }
 
 button {
-	padding: 10px;
-	font-size: 20px;
+  padding: 2vw;
+  font-size: 3vw;
+  border-radius: 3vw;
+}
+
+.animated-text {
+  background-clip: text; /* Clip background to the text content */
+  -webkit-background-clip: text; /* For older Webkit browsers */
+  color: transparent; /* Make text color transparent to show gradient */
+  background-image: linear-gradient(
+    /* Define the gradient animation */ to right,
+    #ff0000 0%,
+    #0e6387 20%,
+    #268b26 40%,
+    #c7c113 60%,
+    #550cbc 100%
+  );
+  animation: animateGradient 2s ease-in-out alternate infinite; /* Animation properties */
+  background-size: 400%; /* Size of the gradient (larger for animation) */
+  -webkit-text-fill-color: transparent; /* For older Webkit browsers */
+}
+
+@keyframes animateGradient {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
 }
